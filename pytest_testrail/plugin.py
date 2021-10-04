@@ -13,7 +13,8 @@ TESTRAIL_TEST_STATUS = {
     "untested": 3,
     "retest": 4,
     "failed": 5,
-    "skipped": None
+    "skipped": 6,
+    "xfailed": 7
 }
 
 PYTEST_TO_TESTRAIL_STATUS = {
@@ -21,6 +22,7 @@ PYTEST_TO_TESTRAIL_STATUS = {
     "failed": TESTRAIL_TEST_STATUS["failed"],
     "skipped": TESTRAIL_TEST_STATUS["skipped"],
     "blocked": TESTRAIL_TEST_STATUS["blocked"],
+    "xfailed": TESTRAIL_TEST_STATUS["xfailed"]
 }
 
 DT_FORMAT = '%d-%m-%Y %H:%M:%S'
@@ -253,6 +255,11 @@ class PyTestRailPlugin(object):
             defects = str(clean_test_defects(defect_ids)).replace('[', '').replace(']', '').replace("'", '')
 
         status = get_test_outcome(outcome.get_result().outcome)
+
+        # If the ststus is reported as skipped, check to see if it was an XFail
+        if status == 6 and hasattr(rep, 'wasxfail'):
+            status = 7
+
         if item.get_closest_marker('skip'):
             marker = item.get_closest_marker('skip')
             if len(marker.kwargs) > 0 and marker.kwargs.get('block'):
@@ -410,6 +417,17 @@ class PyTestRailPlugin(object):
             data,
             cert_check=self.cert_check
         )
+
+        error = self.client.get_error(response)
+        if error and 'Deadlock' in error:
+            import time
+            time.sleep(2)
+            response = self.client.send_post(
+                ADD_RESULTS_URL.format(testrun_id),
+                data,
+                cert_check=self.cert_check
+            )
+
         error = self.client.get_error(response)
         if error:
             print('[{}] Info: Testcases not published for following reason: "{}"'.format(TESTRAIL_PREFIX, error))
