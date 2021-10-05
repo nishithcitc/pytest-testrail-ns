@@ -1,4 +1,4 @@
-pytest-testrail-e2e
+pytest-testrail-ns
 ===============
 
 [![PyPI version](https://badge.fury.io/py/pytest-testrail-e2e.svg)](https://badge.fury.io/py/pytest-testrail-e2e)
@@ -12,7 +12,7 @@ The results of the collected tests will be updated against the testplan/testrun 
 Installation
 ------------
 
-    pip install pytest-testrail-e2e
+    pip install pytest-testrail-ns
 
 Configuration
 -------------
