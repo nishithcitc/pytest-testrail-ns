@@ -194,7 +194,7 @@ class PyTestRailPlugin(object):
 
     def pytest_report_header(self, config, startdir):
         """ Add extra-info in header """
-        message = 'pytest-testrail-e2e: '
+        message = 'pytest-testrail-ns: '
         if self.testplan_id:
             message += 'existing testplan #{} selected'.format(self.testplan_id)
         elif self.testrun_id:

@@ -157,7 +157,7 @@ def pytest_configure(config):
                 report_single_test=config.getoption('--tr-report-single-test')
             ),
             # Name of plugin instance (allow to be used by other plugins)
-            name="pytest-testrail-e2e-instance"
+            name="pytest-testrail-ns-instance"
         )
 
 

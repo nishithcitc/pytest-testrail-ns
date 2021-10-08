@@ -1,4 +1,4 @@
-pytest-testrail-e2e
+pytest-testrail-ns
 ===================
 
 |PyPI version| |Downloads| |MIT license| |pytest|
@@ -12,7 +12,7 @@ Installation
 
 ::
 
-    pip install pytest-testrail-e2e
+    pip install pytest-testrail-ns
 
 Configuration
 -------------
