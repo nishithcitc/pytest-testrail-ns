@@ -271,7 +271,7 @@ class PyTestRailPlugin(object):
 
             comment = marker.args[0] if len(marker.args) > 0 else marker.kwargs.get('reason')
 
-        if item.get_closest_marker(TESTRAIL_PREFIX):
+        if item.get_closest_marker(TESTRAIL_PREFIX) and not item.get_closest_marker('exclude'):
             testcaseids = item.get_closest_marker(TESTRAIL_PREFIX).kwargs.get('ids')
             if testcaseids and (item.get_closest_marker('skip') or rep.when == 'call'
                                 or (rep.when == 'setup' and outcome.get_result().outcome == 'failed')):

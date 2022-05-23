@@ -62,6 +62,18 @@ Skip a testcase [**You need create 'Skipped' status in TestRail'**]:
         def test_bar():
             # test code goes here
 
+Exclude a testcase  [**You need exclude testcase if it is not part of TestRail TestRun'**]:
+
+.. code:: python
+
+        from pytest_testrail.plugin import pytestrail
+
+        @pytestrail.case("C1234")
+        @pytest.mark.exclude
+        def test_bar():
+            # test code goes here
+
+
 Block a testcase:
 
 .. code:: python

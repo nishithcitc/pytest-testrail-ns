@@ -10,7 +10,7 @@ setup(
     name='pytest-testrail-ns',
     description='pytest plugin for creating TestRail runs and adding results',
     long_description=read_file('README.rst'),
-    version='1.0.1',
+    version='1.0.2',
     author='NGUYEN Viet',
     author_email='vietnq254@live.com',
     url='https://github.com/nishithcitc/pytest-testrail-ns',
