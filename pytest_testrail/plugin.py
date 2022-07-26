@@ -240,7 +240,7 @@ class PyTestRailPlugin(object):
         """ Collect result and associated testcases (TestRail) of an execution """
         outcome = yield
         rep = outcome.get_result()
-        comment = rep.longrepr
+        comment = rep.longrepr if rep.longrepr is not None else rep.caplog
 
         defects = None
         defect_ids = None
