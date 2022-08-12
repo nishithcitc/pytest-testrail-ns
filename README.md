@@ -1,8 +1,8 @@
 pytest-testrail-ns
 ===============
 
-[![PyPI version](https://badge.fury.io/py/pytest-testrail-e2e.svg)](https://badge.fury.io/py/pytest-testrail-e2e)
-[![Downloads](https://pepy.tech/badge/pytest-testrail-e2e)](https://pepy.tech/project/pytest-testrail-e2e)
+[![PyPI version](https://badge.fury.io/py/pytest-testrail-ns.svg)](https://badge.fury.io/py/pytest-testrail-ns)
+[![Downloads](https://pepy.tech/badge/pytest-testrail-ns)](https://pepy.tech/project/pytest-testrail-ns)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](/LICENSE)
 [![pytest](https://img.shields.io/badge/pytest-%3E%3D3.6-blue.svg)](https://img.shields.io/badge/pytest-%3E%3D3.6-blue.svg)
 
@@ -182,7 +182,7 @@ You can read the whole TestRail documentation [here](http://docs.gurock.com/).
 
 ## Author
 
-NGUYEN Viet - [github](https://github.com/vietnq254)
+Nishith Shah - [github](https://github.com/nishithcitc)
 
 ## License
 

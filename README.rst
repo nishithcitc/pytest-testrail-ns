@@ -239,7 +239,7 @@ You can read the whole TestRail documentation
 Author
 ------
 
-NGUYEN Viet - `github <https://github.com/vietnq254>`__
+Nishith Shah - `github <https://github.com/nishithcitc>`__
 
 License
 -------
@@ -253,10 +253,10 @@ Acknowledgments
    `pytest-testrail <https://github.com/allankp/pytest-testrail>`__
    repository that was cloned.
 
-.. |PyPI version| image:: https://badge.fury.io/py/pytest-testrail-e2e.svg
-   :target: https://badge.fury.io/py/pytest-testrail-e2e
-.. |Downloads| image:: https://pepy.tech/badge/pytest-testrail-e2e
-   :target: https://pepy.tech/project/pytest-testrail-e2e
+.. |PyPI version| image:: https://badge.fury.io/py/pytest-testrail-ns.svg
+   :target: https://badge.fury.io/py/pytest-testrail-ns
+.. |Downloads| image:: https://pepy.tech/badge/pytest-testrail-ns
+   :target: https://pepy.tech/project/pytest-testrail-ns
 .. |MIT license| image:: http://img.shields.io/badge/license-MIT-brightgreen.svg
    :target: /LICENSE
 .. |pytest| image:: https://img.shields.io/badge/pytest-%3E%3D3.6-blue.svg
