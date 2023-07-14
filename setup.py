@@ -12,7 +12,7 @@ setup(
     long_description=read_file('README.rst'),
     version='1.0.3.2',
     author='Nishith Shah',
-    author_email='mshthshah@gmail.com',
+    author_email='nshthshah@gmail.com',
     url='https://github.com/nishithcitc/pytest-testrail-ns',
     packages=[
         'pytest_testrail',
